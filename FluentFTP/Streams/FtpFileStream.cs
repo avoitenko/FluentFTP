@@ -58,7 +58,7 @@ namespace FluentFTP.Streams {
 
 			// normal slow mode, return a FileStream
 			var bufferSize = client != null ? client.Config.LocalFileBufferSize : 4096;
-			return new FileStream(localPath, FileMode.Open, FileAccess.Read, FileShare.Read, bufferSize, isAsync);
+			return new FileStream(localPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite, bufferSize, isAsync);
 		}
 
 		/// <summary>
